@@ -4,11 +4,19 @@ body {
     padding: 0;
     background-color: #202124; /* Couleur sombre */
     color: #ffffff; /* Couleur du texte */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-header {
+.container {
     text-align: center;
-    padding: 50px 0;
+}
+
+nav {
+    background-color: #333; /* Couleur de la barre de navigation */
+    padding: 10px 0;
 }
 
 nav ul {
