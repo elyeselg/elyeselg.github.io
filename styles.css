@@ -2,8 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #202124; /* Couleur sombre */
-    color: #ffffff; /* Couleur du texte */
+    background-color: #f9f7f7; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,8 +14,14 @@ body {
     text-align: center;
 }
 
+header {
+    background-color: #1abc9c; /* Couleur d'arrière-plan de l'en-tête */
+    color: #fff; /* Couleur du texte de l'en-tête */
+    padding: 50px 0;
+}
+
 nav {
-    background-color: #333; /* Couleur de la barre de navigation */
+    background-color: #3498db; /* Couleur de fond de la barre de navigation */
     padding: 10px 0;
 }
 
@@ -32,7 +38,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #fff; /* Couleur du texte des liens de navigation */
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -40,10 +46,47 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: #2980b9; /* Couleur de survol des liens de navigation */
+}
+
+main {
+    background-color: #fff; /* Couleur de fond du contenu principal */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
 
 footer {
-    text-align: center;
+    background-color: #1abc9c; /* Couleur d'arrière-plan du pied de page */
+    color: #fff; /* Couleur du texte du pied de page */
     padding: 20px 0;
+}
+
+.project {
+    background-color: #fff; /* Couleur de fond des projets */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Effet de translation vers le haut au survol */
+}
+
+/* Ajout de styles pour les liens de téléchargement */
+.project a {
+    display: block;
+    background-color: #3498db; /* Couleur de fond des liens */
+    color: #fff; /* Couleur du texte des liens */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.project a:hover {
+    background-color: #2980b9; /* Couleur de fond des liens au survol */
 }
