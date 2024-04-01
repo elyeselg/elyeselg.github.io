@@ -1,21 +1,29 @@
-body {
+/* Reset styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background-image: url('image fond 1.jpg'); /* Chemin de votre image de fond */
-    background-size: cover;
-    background-position: center;
-    color: #ffffff; /* Couleur du texte */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 header {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 20px 0;
     text-align: center;
-    padding: 50px 0;
 }
 
 h1 {
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 36px;
 }
 
 nav ul {
@@ -38,28 +46,25 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Couleur au survol */
+    color: #ffcc00;
 }
 
-main {
-    margin-top: 50px;
+.hero {
+    background-image: url('images/image_fond_1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 100px 0;
     text-align: center;
 }
 
-
-/* Ajout de styles pour la classe "social" */
-.social {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.hero h2 {
+    font-size: 32px;
 }
 
-.social a {
-    margin: 0 10px;
+footer {
+    background-color: #3498db;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
 }
-
-.social img {
-    width: 40px;
-    height: auto;
-}
-
