@@ -2,12 +2,12 @@
 const gallery = document.querySelector('.gallery');
 
 const projects = [
-    { name: 'Project 1', image: 'project1.jpg' },
-    { name: 'Project 2', image: 'project2.jpg' },
-    { name: 'Project 3', image: 'project3.jpg' },
-    { name: 'Project 4', image: 'project4.jpg' },
-    { name: 'Project 5', image: 'project5.jpg' },
-    { name: 'Project 6', image: 'project6.jpg' }
+    { name: 'Automata Project', image: 'automate_cellulaire.png' },
+    { name: 'Encryption', image: 'AES.png' },
+    { name: 'NEOS', image: 'logo_clair.png' },
+    { name: 'IA Translate', image: 'translate.png' },
+    { name: 'IA game Guess who', image: 'project5.jpg' },
+    { name: 'Task manager', image: 'task.jpg' }
 ];
 
 projects.forEach(project => {
