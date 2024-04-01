@@ -7,6 +7,9 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #f1f1f1; /* Fond légèrement teinté de gris pour plus de modernité */
+    color: #333; /* Couleur de texte sombre pour une meilleure lisibilité */
+    line-height: 1.6; /* Espacement des lignes amélioré pour une meilleure lisibilité */
 }
 
 .container {
@@ -16,8 +19,8 @@ body {
 }
 
 header {
-    background-color: #ff5733;
-    color: #ffffff;
+    background-color: #333; /* Fond noir pour un look moderne */
+    color: #fff; /* Texte blanc pour contraste */
     padding: 20px 0;
     text-align: center;
 }
@@ -39,35 +42,35 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     font-size: 20px;
     transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffcc00;
+    color: #ff5733; /* Changement de couleur au survol */
 }
 
 .hero {
-    background-color: #3498db;
-    color: #ffffff;
-    padding: 100px 0;
+    background-color: #ff5733; /* Fond orange vif pour attirer l'attention */
+    color: #fff;
+    padding: 200px 0; /* Plus grand rembourrage pour un meilleur impact visuel */
     text-align: center;
 }
 
 .hero h2 {
-    font-size: 32px;
+    font-size: 48px; /* Titre plus grand pour captiver l'attention */
 }
 
 .projects {
-    background-color: #f9f9f9;
-    padding: 80px 0;
+    background-color: #fff; /* Fond blanc pour plus de clarté */
+    padding: 150px 0; /* Rembourrage plus important pour créer de l'espace */
+    text-align: center;
 }
 
 .projects h2 {
-    text-align: center;
-    margin-bottom: 40px;
+    font-size: 36px; /* Titre plus grand pour captiver l'attention */
 }
 
 .gallery {
@@ -93,43 +96,49 @@ nav ul li a:hover {
 }
 
 #about-me {
-    background-color: #f5f5f5;
-    padding: 80px 0;
+    background-color: #333; /* Fond noir pour un look moderne */
+    color: #fff;
+    padding: 200px 0; /* Plus grand rembourrage pour un meilleur impact visuel */
+    text-align: center;
 }
 
 #about-me h2 {
-    text-align: center;
-    margin-bottom: 40px;
+    font-size: 48px; /* Titre plus grand pour captiver l'attention */
+}
+
+#about-me p {
+    margin-bottom: 30px; /* Ajouter de l'espace entre les paragraphes */
 }
 
 .btn {
     display: inline-block;
     background-color: #ff5733;
-    color: #ffffff;
-    padding: 10px 20px;
+    color: #fff;
+    padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
     margin-right: 20px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition fluide pour le changement de couleur */
 }
 
 .btn:hover {
-    background-color: #ff8c66;
+    background-color: #fff;
+    color: #ff5733;
 }
 
 .social {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px; /* Ajouter un peu d'espace en haut */
 }
 
 .social img {
-    width: 30px; /* Ajuster la taille des images */
+    width: 40px;
     margin: 0 10px;
 }
 
 footer {
-    background-color: #ff5733;
-    color: #ffffff;
+    background-color: #333; /* Fond noir pour un look moderne */
+    color: #fff;
     text-align: center;
     padding: 20px 0;
 }
