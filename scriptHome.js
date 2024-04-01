@@ -19,3 +19,19 @@ projects.forEach(project => {
     `;
     gallery.innerHTML += projectHTML;
 });
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        const offset = 80; // Ajustez la valeur d'offset comme souhaité pour compenser la hauteur du header
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
