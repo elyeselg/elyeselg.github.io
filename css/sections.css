@@ -1,13 +1,3 @@
-/* ═══════════════════════════════════════════════════
-   SECTIONS CSS
-   hero.css | about.css | projects.css | skills.css | contact.css
-   Tout regroupé ici pour clarté, découper si besoin
-   ═══════════════════════════════════════════════════ */
-
-
-/* ══════════════════════════
-   HERO
-   ══════════════════════════ */
 #hero {
   min-height: 100vh; display: grid;
   grid-template-columns: 1fr auto;
@@ -108,9 +98,7 @@
 }
 
 
-/* ══════════════════════════
-   ABOUT
-   ══════════════════════════ */
+
 #about {
   padding: 9rem 4rem;
   display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
@@ -160,9 +148,7 @@
 }
 
 
-/* ══════════════════════════
-   PROJECTS
-   ══════════════════════════ */
+
 #projects { padding: 9rem 4rem; }
 
 .proj-head {
@@ -225,9 +211,7 @@
 }
 
 
-/* ══════════════════════════
-   SKILLS
-   ══════════════════════════ */
+
 #skills { padding: 9rem 4rem; }
 
 .skills-big-title { font-size: clamp(2rem, 5vw, 4rem); font-weight: 800; letter-spacing: -.04em; margin-bottom: 3rem; }
@@ -260,9 +244,7 @@
 }
 
 
-/* ══════════════════════════
-   CONTACT
-   ══════════════════════════ */
+
 #contact { padding: 9rem 4rem 6rem; }
 
 .contact-inner { max-width: 800px; margin: 0 auto; text-align: center; }

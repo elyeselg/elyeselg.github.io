@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio — Votre Nom</title>
+  <title>Portfolio — EL GAMOUNE Elyes</title>
 
-  <!-- Google Fonts -->
+ 
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
 
-  <!-- ═══ CSS MODULAIRE ═══════════════════════════════
-       Ordre important : style.css en premier (variables),
-       puis nav.css, puis sections.css
-  ════════════════════════════════════════════════════ -->
+ 
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="css/nav.css"/>
   <link rel="stylesheet" href="css/sections.css"/>
@@ -22,14 +19,9 @@
   <div id="cur"><div id="cur-d"></div></div>
   <div id="cur-r"></div>
 
-  <!-- Canvas 3D background -->
   <canvas id="c3d"></canvas>
 
-  <!-- ════════════════════════════════════════════════
-       NAV
-       Pour modifier les liens : éditer les <a href>
-       Pour modifier le logo   : éditer .logo
-  ════════════════════════════════════════════════════ -->
+ 
   <nav>
     <div class="logo">
       <em>[</em>SYS<em>::</em><span style="color:var(--green)">ALGO</span><em>]</em>
@@ -43,26 +35,15 @@
   </nav>
 
 
-  <!-- ════════════════════════════════════════════════
-       SECTION 01 — HERO
-       Modifier : nom, sous-titre, description, stats
-  ════════════════════════════════════════════════════ -->
+ 
   <section id="hero">
     <div>
-      <div class="h-tag">● Disponible — Candidature Master 2025</div>
-
       <h1 class="h-title">
-        <span>Votre</span>
-        <span>Prénom</span>
-        <span class="outline hl">NOM.</span>
+        <span>Elyes</span>
+        <span class="outline hl">EL GAMOUNE</span>
       </h1>
 
-      <div class="h-sub">L3 Informatique · Option Mathématiques</div>
-
-      <p class="h-desc">
-        Algorithmique, Data Science &amp; Bioinformatique —<br/>
-        je construis des systèmes là où les maths rencontrent le code.
-      </p>
+      <div class="h-sub">Licence Informatique option Mathématiques</div>
 
       <div class="h-btns">
         <a href="#projects" class="btn btn-a">Voir mes projets →</a>
@@ -70,23 +51,8 @@
       </div>
     </div>
 
-    <!-- Stats droite -->
-    <div class="h-stats">
-      <div class="h-stat">
-        <div class="h-stat-n">6+</div>
-        <div class="h-stat-l">Projets</div>
-      </div>
-      <div class="h-stat">
-        <div class="h-stat-n">3</div>
-        <div class="h-stat-l">Années</div>
-      </div>
-      <div class="h-stat">
-        <div class="h-stat-n">8+</div>
-        <div class="h-stat-l">Outils</div>
-      </div>
-    </div>
-
-    <!-- Terminal algo (visible uniquement desktop) -->
+   
+    <!-- Terminal algo -->
     <div class="h-terminal">
       <div class="t-bar">
         <div class="t-dot t-dot-1"></div>
@@ -99,35 +65,8 @@
   </section>
 
 
-  <!-- ════════════════════════════════════════════════
-       TICKER — bande défilante
-       Modifier les spans pour changer les mots
-  ════════════════════════════════════════════════════ -->
-  <div class="ticker-wrap">
-    <div class="ticker">
-      <span>Python <span class="dot">✦</span></span>
-      <span>Machine Learning <span class="dot">✦</span></span>
-      <span>C / C++ <span class="dot">✦</span></span>
-      <span>Bioinformatique <span class="dot">✦</span></span>
-      <span>Data Science <span class="dot">✦</span></span>
-      <span>Mathématiques <span class="dot">✦</span></span>
-      <span>R &amp; Statistiques <span class="dot">✦</span></span>
-      <span>SQL <span class="dot">✦</span></span>
-      <span>Algorithmique <span class="dot">✦</span></span>
-      <span>Java <span class="dot">✦</span></span>
-      <span>MATLAB <span class="dot">✦</span></span>
-      <span>Scikit-learn <span class="dot">✦</span></span>
-      <!-- Doublon pour boucle infinie -->
-      <span>Python <span class="dot">✦</span></span>
-      <span>Machine Learning <span class="dot">✦</span></span>
-      <span>C / C++ <span class="dot">✦</span></span>
-      <span>Bioinformatique <span class="dot">✦</span></span>
-      <span>Data Science <span class="dot">✦</span></span>
-      <span>Mathématiques <span class="dot">✦</span></span>
-      <span>R &amp; Statistiques <span class="dot">✦</span></span>
-      <span>SQL <span class="dot">✦</span></span>
-    </div>
-  </div>
+ 
+
 
 
   <!-- ════════════════════════════════════════════════
@@ -137,7 +76,7 @@
   <section id="about">
 
     <div class="rv-l">
-      <span class="s-label">// 01 — Profil</span>
+      <span class="s-label">// Profil</span>
       <h2 class="about-title">
         Maths &amp; Code<br/>
         au service de la <span>donnée.</span>
@@ -149,71 +88,22 @@
       </p>
       <p class="about-text">
         Mes projets couvrent l'algorithmique fondamentale, l'analyse statistique,
-        la bioinformatique computationnelle et le machine learning. Je candidate à un Master
-        pour approfondir ces thèmes en recherche ou ingénierie avancée.
+        la bioinformatique computationnelle et le machine learning.
       </p>
-      <div class="about-tags">
-        <span class="tag hi">Algorithmique</span>
-        <span class="tag hi">Data Science</span>
-        <span class="tag hi">Bioinformatique</span>
-        <span class="tag">Maths discrètes</span>
-        <span class="tag">Modélisation</span>
-        <span class="tag">Visualisation</span>
-      </div>
-    </div>
-
-    <!-- Carte barres de compétences -->
-    <div class="skill-card rv">
-      <div style="font-family:var(--fm);font-size:.63rem;color:var(--muted);letter-spacing:.22em;margin-bottom:2rem;text-transform:uppercase">
-        // Maîtrise des outils
-      </div>
-      <div class="skill-rows" id="sbars">
-        <!-- Format : --w = pourcentage affiché -->
-        <div class="skill-row">
-          <div class="skill-row-top"><span class="skill-name">Python</span><span class="skill-pct">90%</span></div>
-          <div class="skill-track"><div class="skill-fill" style="--w:90%"></div></div>
-        </div>
-        <div class="skill-row">
-          <div class="skill-row-top"><span class="skill-name">C / C++</span><span class="skill-pct">75%</span></div>
-          <div class="skill-track"><div class="skill-fill" style="--w:75%"></div></div>
-        </div>
-        <div class="skill-row">
-          <div class="skill-row-top"><span class="skill-name">R</span><span class="skill-pct">70%</span></div>
-          <div class="skill-track"><div class="skill-fill" style="--w:70%"></div></div>
-        </div>
-        <div class="skill-row">
-          <div class="skill-row-top"><span class="skill-name">Java</span><span class="skill-pct">65%</span></div>
-          <div class="skill-track"><div class="skill-fill" style="--w:65%"></div></div>
-        </div>
-        <div class="skill-row">
-          <div class="skill-row-top"><span class="skill-name">SQL</span><span class="skill-pct">68%</span></div>
-          <div class="skill-track"><div class="skill-fill" style="--w:68%"></div></div>
-        </div>
-        <div class="skill-row">
-          <div class="skill-row-top"><span class="skill-name">MATLAB</span><span class="skill-pct">60%</span></div>
-          <div class="skill-track"><div class="skill-fill" style="--w:60%"></div></div>
-        </div>
-      </div>
-    </div>
 
   </section>
 
 
-  <!-- ════════════════════════════════════════════════
-       SECTION 03 — PROJETS
-       Pour ajouter un projet : dupliquer un bloc .pcard
-       ptag classes : .a (vert) | .b (amber) | .c (blanc)
-       Pour un projet en cours : ajouter class "wip"
-  ════════════════════════════════════════════════════ -->
+ 
   <section id="projects">
 
     <div class="proj-head rv">
       <div>
-        <span class="s-label">// 02 — Projets</span>
+        <span class="s-label">//Projets</span>
         <h2 class="proj-title">Ce que j'ai construit.</h2>
       </div>
       <!-- ↓ Mettre ton vrai username GitHub ici -->
-      <a href="https://github.com/votre-username" target="_blank" class="btn btn-b">GitHub →</a>
+      <a href="https://github.com/elyeselg" target="_blank" class="btn btn-b">GitHub →</a>
     </div>
 
     <div class="proj-grid">
@@ -347,14 +237,11 @@
   </section>
 
 
-  <!-- ════════════════════════════════════════════════
-       SECTION 04 — STACK TECHNIQUE
-       Pour modifier un outil : éditer .sm-cell
-       --w = niveau de maîtrise en %
-  ════════════════════════════════════════════════════ -->
+ 
+
   <section id="skills">
     <div class="rv">
-      <span class="s-label">// 03 — Stack technique</span>
+      <span class="s-label">//Stack technique</span>
       <h2 class="skills-big-title">Mes outils.</h2>
     </div>
 
@@ -420,30 +307,23 @@
   </section>
 
 
-  <!-- ════════════════════════════════════════════════
-       SECTION 05 — CONTACT
-       Modifier : email, liens GitHub/LinkedIn, CV
-  ════════════════════════════════════════════════════ -->
+  
   <section id="contact">
     <div class="contact-inner rv">
-      <span class="s-label">// 04 — Contact</span>
+      <span class="s-label">//Contact</span>
       <h2 class="ct-title">
         Travaillons<br/>
         <span class="glow">ensemble.</span>
       </h2>
-      <p class="ct-desc">
-        En recherche active d'un Master en Informatique, Data Science ou Bioinformatique.<br/>
-        Contactez-moi pour toute opportunité ou collaboration.
-      </p>
+      
       <div class="ct-links">
-        <!-- ↓ Remplacer votre@email.com -->
-        <a href="mailto:votre@email.com" class="ct-card">✉ Email</a>
-        <!-- ↓ Remplacer votre-username -->
-        <a href="https://github.com/votre-username" target="_blank" class="ct-card">⌥ GitHub</a>
-        <!-- ↓ Remplacer votre-profil -->
-        <a href="https://linkedin.com/in/votre-profil" target="_blank" class="ct-card">▸ LinkedIn</a>
+        <a href="mailto:elgamouneelyes@gmail.com" class="ct-card">✉ Email</a>
+      
+        <a href="https://github.com/elyeselg" target="_blank" class="ct-card">⌥ GitHub</a>
+      
+        <a href="https://linkedin.com/in/elyes-el-gamoune-75319120a/" target="_blank" class="ct-card">▸ LinkedIn</a>
       </div>
-      <!-- ↓ Placer ton CV.pdf dans le dossier racine -->
+     
       <a href="cv.pdf" download class="cv-btn">↓ Télécharger mon CV</a>
     </div>
   </section>
@@ -451,16 +331,13 @@
 
   <!-- FOOTER -->
   <footer>
-    <span>© 2025 — <span class="fg">Votre Nom</span></span>
+    <span>© 2025 — <span class="fg">EL GAMOUNE Elyes</span></span>
     <span>L3 Informatique · Option Mathématiques</span>
     <span>Fait avec <span class="fg">♥</span> et café</span>
   </footer>
 
 
-  <!-- ═══ JS MODULAIRE ═══════════════════════════════
-       canvas3d.js → formes 3D en fond (chargé en premier)
-       app.js      → curseur, terminal, scroll, nav
-  ════════════════════════════════════════════════════ -->
+  <!--JS-->
   <script src="js/canvas3d.js"></script>
   <script src="js/app.js"></script>
 

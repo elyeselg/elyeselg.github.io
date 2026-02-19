@@ -1,14 +1,3 @@
-/* ═══════════════════════════════════════════════════
-   canvas3d.js — Formes 3D wireframe en POINTS (dots)
-   Style Matrix : vert sur noir, pas de traits pleins
-   ═══════════════════════════════════════════════════
-
-   Pour modifier :
-   - COLORS   → palette des formes
-   - DOT_SIZE → taille des points
-   - SHAPE_COUNT → nombre de formes (auto selon résolution)
-   - vitesse → paramètre sp dans Shape3D.reset()
-*/
 
 const cv = document.getElementById('c3d');
 const gx = cv.getContext('2d');
@@ -21,7 +10,7 @@ function resize() {
 resize();
 window.addEventListener('resize', () => { resize(); spawnAll(); });
 
-/* ── PALETTE ──────────────────────────────────────── */
+
 const COLORS = [
   [0,   255, 65],   // vert Matrix pur
   [0,   200, 50],   // vert moyen
@@ -29,12 +18,13 @@ const COLORS = [
   [0,   180, 80],   // vert émeraude
 ];
 
-/* ── CONSTANTES ───────────────────────────────────── */
-const DOT_SIZE       = 1.4;   // rayon des points vertices
-const EDGE_DOT_COUNT = 6;     // points intermédiaires sur chaque arête
-const EDGE_DOT_SIZE  = 0.55;  // rayon des points d'arête
 
-/* ── CLASSE SHAPE 3D ──────────────────────────────── */
+const DOT_SIZE       = 2.2;   // rayon des points vertices
+const EDGE_DOT_COUNT = 9;     // points intermédiaires sur chaque arête
+const EDGE_DOT_SIZE  = 1.0;   // rayon des points d'arête
+
+
+
 class Shape3D {
   constructor() { this.reset(true); }
 
@@ -47,7 +37,7 @@ class Shape3D {
       this.y = Math.random() * H;
     }
 
-    this.sz   = 28 + Math.random() * 60;
+    this.sz   = 40 + Math.random() * 80;
     this.type = ['cube','octa','tetra','icosa','prism'][Math.floor(Math.random() * 5)];
 
     // Rotation initiale aléatoire
@@ -68,7 +58,7 @@ class Shape3D {
     // Couleur depuis la palette
     this.col   = COLORS[Math.floor(Math.random() * COLORS.length)];
     // Alpha faible = discret mais présent
-    this.alpha = .055 + Math.random() * .075;
+    this.alpha = .13 + Math.random() * .15;
 
     this.verts = [];
     this.edges = [];
@@ -176,7 +166,7 @@ class Shape3D {
     const [r, g, b] = this.col;
 
     // ── Vertices = gros points lumineux ────────────
-    gx.fillStyle = `rgba(${r},${g},${b},${this.alpha * 2.8})`;
+    gx.fillStyle = `rgba(${r},${g},${b},${this.alpha * 4.5})`;
     for (const p of pts) {
       gx.beginPath();
       gx.arc(this.x + p[0], this.y + p[1], DOT_SIZE, 0, Math.PI * 2);
@@ -184,7 +174,7 @@ class Shape3D {
     }
 
     // ── Arêtes = série de petits points ───────────
-    gx.fillStyle = `rgba(${r},${g},${b},${this.alpha * 1.1})`;
+    gx.fillStyle = `rgba(${r},${g},${b},${this.alpha * 2.0})`;
     for (const [ai, bi] of this.edges) {
       const ax = this.x + pts[ai][0], ay = this.y + pts[ai][1];
       const bx = this.x + pts[bi][0], by = this.y + pts[bi][1];
@@ -200,7 +190,7 @@ class Shape3D {
   }
 }
 
-/* ── PARTICULES FOND ─────────────────────────────── */
+
 class Particle {
   constructor() {
     this.x  = Math.random() * W;
@@ -228,12 +218,12 @@ class Particle {
   }
 }
 
-/* ── GLOWS AMBIANTS ──────────────────────────────── */
+
 function drawAmbient() {
   const blobs = [
-    { x: W * .85, y: H * .12, r: 380, alpha: .035 },
-    { x: W * .08, y: H * .75, r: 260, alpha: .028 },
-    { x: W * .45, y: H * .5,  r: 180, alpha: .018 },
+    { x: W * .85, y: H * .12, r: 420, alpha: .06  },
+    { x: W * .08, y: H * .75, r: 300, alpha: .05  },
+    { x: W * .45, y: H * .5,  r: 220, alpha: .035 },
   ];
   for (const b of blobs) {
     const g = gx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.r);
@@ -244,11 +234,11 @@ function drawAmbient() {
   }
 }
 
-/* ── INIT & BOUCLE ───────────────────────────────── */
+
 let shapes = [], particles = [];
 
 function spawnAll() {
-  const ns = Math.min(16, Math.floor(W * H / 50000) + 6);
+  const ns = Math.min(28, Math.floor(W * H / 28000) + 10);
   const np = Math.floor(W * H / 9000);
   shapes    = Array.from({ length: ns }, () => new Shape3D());
   particles = Array.from({ length: np }, () => new Particle());

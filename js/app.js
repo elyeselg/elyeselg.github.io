@@ -1,15 +1,8 @@
-/* ═══════════════════════════════════════════════════
-   app.js — Interactions principales
-   ─ Curseur custom
-   ─ Terminal typewriter
-   ─ Scroll reveal
-   ─ Barres de compétences
-   ─ Nav active
-   ═══════════════════════════════════════════════════ */
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── CURSEUR CUSTOM ─────────────────────────────── */
+
   const curEl  = document.getElementById('cur');
   const curR   = document.getElementById('cur-r');
   let mx=0, my=0, rx=0, ry=0;
@@ -40,23 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  /* ── TERMINAL TYPEWRITER ────────────────────────── */
-  /*
-    Pour personnaliser le terminal : modifier le tableau LINES ci-dessous.
-    Types disponibles :
-      'prompt' → ligne de commande  (p = chemin, c = commande)
-      'out'    → output standard    (txt = texte, peut contenir du HTML)
-      'code'   → ligne de code      (kw = mot-clé coloré, rest = suite)
-  */
+  
   const LINES = [
-    { t: 'prompt', p: '~/portfolio', c: ' python3 needleman.py',  d: 0    },
-    { t: 'out',    txt: '> Loading sequences...  n=1024',          d: 900  },
-    { t: 'code',   kw: 'def ',  rest: 'nw(s1, s2, gap=-1):',      d: 600  },
-    { t: 'out',    txt: '  init DP matrix  →  O(nm)',              d: 500  },
-    { t: 'out',    txt: '  filling table ██████ ✓',                d: 800  },
-    { t: 'out',    txt: '  traceback done',                        d: 500  },
-    { t: 'out',    txt: '> Score : <span style="color:#00ff41">147.3</span>  ✓', d: 600 },
-    { t: 'prompt', p: '~/portfolio', c: ' _', d: 400, cur: true   },
+    { t: 'prompt', p: '~/math', c: ' python3 svd_compress.py',               d: 0    },
+    { t: 'out',    txt: '> A ∈ ℝ^(512×512),  rank(A) = 512',                 d: 800  },
+    { t: 'code',   kw: 'U, Σ, Vᵀ', rest: ' = np.linalg.svd(A)',             d: 600  },
+    { t: 'out',    txt: '> Σ = diag(σ₁ ≥ σ₂ ≥ … ≥ σ_n ≥ 0)',               d: 500  },
+    { t: 'code',   kw: 'k', rest: ' = 42  # rank-k approx',                  d: 400  },
+    { t: 'out',    txt: '> ||A - Aₖ||_F  =  σ_{k+1} = <span style="color:#00ff41">0.0031</span>', d: 700 },
+    { t: 'out',    txt: '> compression : 512² → 42×(512+512+1)',              d: 600  },
+    { t: 'out',    txt: '> ratio  <span style="color:#00ff41">6.07×</span>  ✓  Eckart–Young thm', d: 700 },
+    { t: 'prompt', p: '~/math', c: ' _', d: 400, cur: true },
   ];
 
   const termBody = document.getElementById('t-body');
@@ -83,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  /* ── SCROLL REVEAL ──────────────────────────────── */
+
   const revObs = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) setTimeout(() => e.target.classList.add('on'), i * 80);
@@ -93,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.rv, .rv-l').forEach(el => revObs.observe(el));
 
 
-  /* ── BARRES DE COMPÉTENCES ──────────────────────── */
+ 
   const barObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -105,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('#sbars, #smosaic').forEach(el => barObs.observe(el));
 
 
-  /* ── NAV ACTIVE AU SCROLL ───────────────────────── */
+ 
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
 
