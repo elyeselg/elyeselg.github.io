@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio — Votre Nom</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!-- ═══ CSS MODULAIRE ═══════════════════════════════
+       Ordre important : style.css en premier (variables),
+       puis nav.css, puis sections.css
+  ════════════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/nav.css"/>
+  <link rel="stylesheet" href="css/sections.css"/>
+</head>
+<body>
+
+  <!-- Curseur custom -->
+  <div id="cur"><div id="cur-d"></div></div>
+  <div id="cur-r"></div>
+
+  <!-- Canvas 3D background -->
+  <canvas id="c3d"></canvas>
+
+  <!-- ════════════════════════════════════════════════
+       NAV
+       Pour modifier les liens : éditer les <a href>
+       Pour modifier le logo   : éditer .logo
+  ════════════════════════════════════════════════════ -->
+  <nav>
+    <div class="logo">
+      <em>[</em>SYS<em>::</em><span style="color:var(--green)">ALGO</span><em>]</em>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">Profil</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#skills">Stack</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- ════════════════════════════════════════════════
+       SECTION 01 — HERO
+       Modifier : nom, sous-titre, description, stats
+  ════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div>
+      <div class="h-tag">● Disponible — Candidature Master 2025</div>
+
+      <h1 class="h-title">
+        <span>Votre</span>
+        <span>Prénom</span>
+        <span class="outline hl">NOM.</span>
+      </h1>
+
+      <div class="h-sub">L3 Informatique · Option Mathématiques</div>
+
+      <p class="h-desc">
+        Algorithmique, Data Science &amp; Bioinformatique —<br/>
+        je construis des systèmes là où les maths rencontrent le code.
+      </p>
+
+      <div class="h-btns">
+        <a href="#projects" class="btn btn-a">Voir mes projets →</a>
+        <a href="#contact"  class="btn btn-b">Me contacter</a>
+      </div>
+    </div>
+
+    <!-- Stats droite -->
+    <div class="h-stats">
+      <div class="h-stat">
+        <div class="h-stat-n">6+</div>
+        <div class="h-stat-l">Projets</div>
+      </div>
+      <div class="h-stat">
+        <div class="h-stat-n">3</div>
+        <div class="h-stat-l">Années</div>
+      </div>
+      <div class="h-stat">
+        <div class="h-stat-n">8+</div>
+        <div class="h-stat-l">Outils</div>
+      </div>
+    </div>
+
+    <!-- Terminal algo (visible uniquement desktop) -->
+    <div class="h-terminal">
+      <div class="t-bar">
+        <div class="t-dot t-dot-1"></div>
+        <div class="t-dot t-dot-2"></div>
+        <div class="t-dot t-dot-3"></div>
+        <span class="t-title">needleman.py</span>
+      </div>
+      <div class="t-body" id="t-body"></div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════
+       TICKER — bande défilante
+       Modifier les spans pour changer les mots
+  ════════════════════════════════════════════════════ -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>Python <span class="dot">✦</span></span>
+      <span>Machine Learning <span class="dot">✦</span></span>
+      <span>C / C++ <span class="dot">✦</span></span>
+      <span>Bioinformatique <span class="dot">✦</span></span>
+      <span>Data Science <span class="dot">✦</span></span>
+      <span>Mathématiques <span class="dot">✦</span></span>
+      <span>R &amp; Statistiques <span class="dot">✦</span></span>
+      <span>SQL <span class="dot">✦</span></span>
+      <span>Algorithmique <span class="dot">✦</span></span>
+      <span>Java <span class="dot">✦</span></span>
+      <span>MATLAB <span class="dot">✦</span></span>
+      <span>Scikit-learn <span class="dot">✦</span></span>
+      <!-- Doublon pour boucle infinie -->
+      <span>Python <span class="dot">✦</span></span>
+      <span>Machine Learning <span class="dot">✦</span></span>
+      <span>C / C++ <span class="dot">✦</span></span>
+      <span>Bioinformatique <span class="dot">✦</span></span>
+      <span>Data Science <span class="dot">✦</span></span>
+      <span>Mathématiques <span class="dot">✦</span></span>
+      <span>R &amp; Statistiques <span class="dot">✦</span></span>
+      <span>SQL <span class="dot">✦</span></span>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════
+       SECTION 02 — À PROPOS
+       Modifier : textes about-text, tags, barres skill
+  ════════════════════════════════════════════════════ -->
+  <section id="about">
+
+    <div class="rv-l">
+      <span class="s-label">// 01 — Profil</span>
+      <h2 class="about-title">
+        Maths &amp; Code<br/>
+        au service de la <span>donnée.</span>
+      </h2>
+      <p class="about-text">
+        Étudiant en L3 Informatique option Mathématiques, je construis ma formation autour
+        d'une conviction : les problèmes les plus intéressants vivent à l'intersection de la
+        rigueur algorithmique et de la donnée réelle.
+      </p>
+      <p class="about-text">
+        Mes projets couvrent l'algorithmique fondamentale, l'analyse statistique,
+        la bioinformatique computationnelle et le machine learning. Je candidate à un Master
+        pour approfondir ces thèmes en recherche ou ingénierie avancée.
+      </p>
+      <div class="about-tags">
+        <span class="tag hi">Algorithmique</span>
+        <span class="tag hi">Data Science</span>
+        <span class="tag hi">Bioinformatique</span>
+        <span class="tag">Maths discrètes</span>
+        <span class="tag">Modélisation</span>
+        <span class="tag">Visualisation</span>
+      </div>
+    </div>
+
+    <!-- Carte barres de compétences -->
+    <div class="skill-card rv">
+      <div style="font-family:var(--fm);font-size:.63rem;color:var(--muted);letter-spacing:.22em;margin-bottom:2rem;text-transform:uppercase">
+        // Maîtrise des outils
+      </div>
+      <div class="skill-rows" id="sbars">
+        <!-- Format : --w = pourcentage affiché -->
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">Python</span><span class="skill-pct">90%</span></div>
+          <div class="skill-track"><div class="skill-fill" style="--w:90%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">C / C++</span><span class="skill-pct">75%</span></div>
+          <div class="skill-track"><div class="skill-fill" style="--w:75%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">R</span><span class="skill-pct">70%</span></div>
+          <div class="skill-track"><div class="skill-fill" style="--w:70%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">Java</span><span class="skill-pct">65%</span></div>
+          <div class="skill-track"><div class="skill-fill" style="--w:65%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">SQL</span><span class="skill-pct">68%</span></div>
+          <div class="skill-track"><div class="skill-fill" style="--w:68%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">MATLAB</span><span class="skill-pct">60%</span></div>
+          <div class="skill-track"><div class="skill-fill" style="--w:60%"></div></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════
+       SECTION 03 — PROJETS
+       Pour ajouter un projet : dupliquer un bloc .pcard
+       ptag classes : .a (vert) | .b (amber) | .c (blanc)
+       Pour un projet en cours : ajouter class "wip"
+  ════════════════════════════════════════════════════ -->
+  <section id="projects">
+
+    <div class="proj-head rv">
+      <div>
+        <span class="s-label">// 02 — Projets</span>
+        <h2 class="proj-title">Ce que j'ai construit.</h2>
+      </div>
+      <!-- ↓ Mettre ton vrai username GitHub ici -->
+      <a href="https://github.com/votre-username" target="_blank" class="btn btn-b">GitHub →</a>
+    </div>
+
+    <div class="proj-grid">
+
+      <!-- PROJET 1 — Remplacer avec tes vraies infos -->
+      <div class="pcard rv">
+        <div class="pc-num">PROJECT_001</div>
+        <div class="pc-top">
+          <h3 class="pc-title">Nom du Projet 1</h3>
+          <div class="pc-icon">🧬</div>
+        </div>
+        <p class="pc-desc">
+          Description du projet. Objectif, méthode utilisée et ce que tu as appris.
+        </p>
+        <div class="pc-tags">
+          <span class="ptag a">Python</span>
+          <span class="ptag b">ML</span>
+          <span class="ptag">NumPy</span>
+        </div>
+        <div class="pc-foot">
+          <a href="https://github.com/votre-username/projet1" class="pc-link" target="_blank">Voir le repo →</a>
+          <span class="pc-year">2024</span>
+        </div>
+      </div>
+
+      <!-- PROJET 2 -->
+      <div class="pcard rv">
+        <div class="pc-num">PROJECT_002</div>
+        <div class="pc-top">
+          <h3 class="pc-title">Nom du Projet 2</h3>
+          <div class="pc-icon">📊</div>
+        </div>
+        <p class="pc-desc">
+          Description du projet. Objectif, méthode utilisée et ce que tu as appris.
+        </p>
+        <div class="pc-tags">
+          <span class="ptag a">R</span>
+          <span class="ptag c">Stats</span>
+          <span class="ptag">ggplot2</span>
+        </div>
+        <div class="pc-foot">
+          <a href="https://github.com/votre-username/projet2" class="pc-link" target="_blank">Voir le repo →</a>
+          <span class="pc-year">2024</span>
+        </div>
+      </div>
+
+      <!-- PROJET 3 -->
+      <div class="pcard rv">
+        <div class="pc-num">PROJECT_003</div>
+        <div class="pc-top">
+          <h3 class="pc-title">Nom du Projet 3</h3>
+          <div class="pc-icon">⚙️</div>
+        </div>
+        <p class="pc-desc">
+          Description du projet. Objectif, méthode utilisée et ce que tu as appris.
+        </p>
+        <div class="pc-tags">
+          <span class="ptag a">C++</span>
+          <span class="ptag b">Algo</span>
+        </div>
+        <div class="pc-foot">
+          <a href="https://github.com/votre-username/projet3" class="pc-link" target="_blank">Voir le repo →</a>
+          <span class="pc-year">2023</span>
+        </div>
+      </div>
+
+      <!-- PROJET 4 -->
+      <div class="pcard rv">
+        <div class="pc-num">PROJECT_004</div>
+        <div class="pc-top">
+          <h3 class="pc-title">Nom du Projet 4</h3>
+          <div class="pc-icon">🔢</div>
+        </div>
+        <p class="pc-desc">
+          Description du projet. Objectif, méthode utilisée et ce que tu as appris.
+        </p>
+        <div class="pc-tags">
+          <span class="ptag a">MATLAB</span>
+          <span class="ptag c">Maths</span>
+          <span class="ptag">Modélisation</span>
+        </div>
+        <div class="pc-foot">
+          <a href="https://github.com/votre-username/projet4" class="pc-link" target="_blank">Voir le repo →</a>
+          <span class="pc-year">2023</span>
+        </div>
+      </div>
+
+      <!-- PROJET 5 — En cours (classe wip) -->
+      <div class="pcard wip rv">
+        <div class="pc-num">PROJECT_005</div>
+        <div class="pc-top">
+          <h3 class="pc-title">Alignement Séquences ADN</h3>
+          <div class="pc-icon">🧪</div>
+        </div>
+        <p class="pc-desc">
+          Implémentation Needleman-Wunsch. Analyse de séquences génomiques,
+          visualisation des alignements optimaux.
+        </p>
+        <div class="pc-tags">
+          <span class="ptag a">Python</span>
+          <span class="ptag b">Bioinf</span>
+          <span class="ptag">Biopython</span>
+        </div>
+        <div class="pc-foot">
+          <span style="font-family:var(--fm);font-size:.66rem;color:var(--green)">◦ En cours</span>
+        </div>
+      </div>
+
+      <!-- PROJET 6 — En cours (classe wip) -->
+      <div class="pcard wip rv">
+        <div class="pc-num">PROJECT_006</div>
+        <div class="pc-top">
+          <h3 class="pc-title">Pipeline ML — Données Médicales</h3>
+          <div class="pc-icon">🤖</div>
+        </div>
+        <p class="pc-desc">
+          Classification &amp; régression sur dataset médical réel.
+          Pipeline complet preprocessing → modèle → rapport visuel.
+        </p>
+        <div class="pc-tags">
+          <span class="ptag a">Sklearn</span>
+          <span class="ptag c">Pandas</span>
+          <span class="ptag">Seaborn</span>
+        </div>
+        <div class="pc-foot">
+          <span style="font-family:var(--fm);font-size:.66rem;color:var(--green)">◦ En cours</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════
+       SECTION 04 — STACK TECHNIQUE
+       Pour modifier un outil : éditer .sm-cell
+       --w = niveau de maîtrise en %
+  ════════════════════════════════════════════════════ -->
+  <section id="skills">
+    <div class="rv">
+      <span class="s-label">// 03 — Stack technique</span>
+      <h2 class="skills-big-title">Mes outils.</h2>
+    </div>
+
+    <div class="skills-mosaic" id="smosaic">
+
+      <div class="sm-cell rv">
+        <span class="sm-icon">🐍</span>
+        <div class="sm-name">Python</div>
+        <div class="sm-desc">NumPy · Pandas · Sklearn<br/>Matplotlib · Biopython</div>
+        <div class="sm-bar"><div class="sm-bar-fill" style="--w:90%"></div></div>
+      </div>
+
+      <div class="sm-cell rv">
+        <span class="sm-icon">⚙️</span>
+        <div class="sm-name">C / C++</div>
+        <div class="sm-desc">Structures de données<br/>Algorithmique bas niveau</div>
+        <div class="sm-bar"><div class="sm-bar-fill" style="--w:75%"></div></div>
+      </div>
+
+      <div class="sm-cell rv">
+        <span class="sm-icon">☕</span>
+        <div class="sm-name">Java</div>
+        <div class="sm-desc">Programmation objet<br/>Design patterns</div>
+        <div class="sm-bar"><div class="sm-bar-fill" style="--w:65%"></div></div>
+      </div>
+
+      <div class="sm-cell rv">
+        <span class="sm-icon">📈</span>
+        <div class="sm-name">R</div>
+        <div class="sm-desc">Statistiques · ggplot2<br/>Analyse de données</div>
+        <div class="sm-bar"><div class="sm-bar-fill" style="--w:70%"></div></div>
+      </div>
+
+      <div class="sm-cell rv">
+        <span class="sm-icon">🗃️</span>
+        <div class="sm-name">SQL</div>
+        <div class="sm-desc">Requêtes complexes<br/>Modélisation relationnelle</div>
+        <div class="sm-bar"><div class="sm-bar-fill" style="--w:68%"></div></div>
+      </div>
+
+      <div class="sm-cell rv">
+        <span class="sm-icon">🔢</span>
+        <div class="sm-name">MATLAB</div>
+        <div class="sm-desc">Calcul numérique<br/>Modélisation mathématique</div>
+        <div class="sm-bar"><div class="sm-bar-fill" style="--w:60%"></div></div>
+      </div>
+
+      <div class="sm-cell rv">
+        <span class="sm-icon">🤖</span>
+        <div class="sm-name">Machine Learning</div>
+        <div class="sm-desc">Classification · Régression<br/>Clustering · Scikit-learn</div>
+        <div class="sm-bar"><div class="sm-bar-fill" style="--w:72%"></div></div>
+      </div>
+
+      <div class="sm-cell rv">
+        <span class="sm-icon">∑</span>
+        <div class="sm-name">Mathématiques</div>
+        <div class="sm-desc">Algèbre linéaire · Analyse<br/>Probabilités · Statistiques</div>
+        <div class="sm-bar"><div class="sm-bar-fill" style="--w:83%"></div></div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════
+       SECTION 05 — CONTACT
+       Modifier : email, liens GitHub/LinkedIn, CV
+  ════════════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="contact-inner rv">
+      <span class="s-label">// 04 — Contact</span>
+      <h2 class="ct-title">
+        Travaillons<br/>
+        <span class="glow">ensemble.</span>
+      </h2>
+      <p class="ct-desc">
+        En recherche active d'un Master en Informatique, Data Science ou Bioinformatique.<br/>
+        Contactez-moi pour toute opportunité ou collaboration.
+      </p>
+      <div class="ct-links">
+        <!-- ↓ Remplacer votre@email.com -->
+        <a href="mailto:votre@email.com" class="ct-card">✉ Email</a>
+        <!-- ↓ Remplacer votre-username -->
+        <a href="https://github.com/votre-username" target="_blank" class="ct-card">⌥ GitHub</a>
+        <!-- ↓ Remplacer votre-profil -->
+        <a href="https://linkedin.com/in/votre-profil" target="_blank" class="ct-card">▸ LinkedIn</a>
+      </div>
+      <!-- ↓ Placer ton CV.pdf dans le dossier racine -->
+      <a href="cv.pdf" download class="cv-btn">↓ Télécharger mon CV</a>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2025 — <span class="fg">Votre Nom</span></span>
+    <span>L3 Informatique · Option Mathématiques</span>
+    <span>Fait avec <span class="fg">♥</span> et café</span>
+  </footer>
+
+
+  <!-- ═══ JS MODULAIRE ═══════════════════════════════
+       canvas3d.js → formes 3D en fond (chargé en premier)
+       app.js      → curseur, terminal, scroll, nav
+  ════════════════════════════════════════════════════ -->
+  <script src="js/canvas3d.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

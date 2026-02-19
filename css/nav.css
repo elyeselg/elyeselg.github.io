@@ -1,0 +1,39 @@
+/* ═══════════════════════════════════════
+   NAV — nav.css
+   ═══════════════════════════════════════ */
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.3rem 4rem;
+  background: rgba(1, 11, 1, 0.85);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+  animation: fadeDown .8s ease both;
+}
+
+.logo {
+  font-family: var(--fm); font-size: .75rem;
+  letter-spacing: .25em; text-transform: uppercase; color: var(--green);
+}
+.logo em { color: var(--muted); font-style: normal; }
+
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a {
+  font-family: var(--fm); font-size: .66rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--muted);
+  text-decoration: none; transition: color .3s; position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 1px; background: var(--green); transition: width .3s;
+}
+.nav-links a:hover  { color: var(--green); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--green); }
+.nav-links a.active::after { width: 100%; }
+
+@media (max-width: 960px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { gap: 1.5rem; }
+}

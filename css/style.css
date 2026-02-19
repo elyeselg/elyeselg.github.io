@@ -1,0 +1,156 @@
+/* ═══════════════════════════════════════════════════
+   PORTFOLIO — MATRIX EDITION
+   Fichier principal CSS
+   Pour modifier la palette → changer les variables :root
+   ═══════════════════════════════════════════════════ */
+
+/* ── VARIABLES ────────────────────────────────────── */
+:root {
+  /* Palette Matrix */
+  --bg:        #010b01;       /* noir végétal profond */
+  --bg2:       #020f02;
+  --glass:     rgba(0, 255, 65, 0.03);
+  --glass2:    rgba(0, 255, 65, 0.06);
+  --border:    rgba(0, 255, 65, 0.08);
+  --border2:   rgba(0, 255, 65, 0.18);
+  --green:     #00ff41;       /* vert Matrix pur */
+  --green-dim: #00b32c;       /* vert foncé */
+  --green-glow:#39ff14;       /* vert fluo hover */
+  --amber:     #ffb627;       /* accent chaud secondaire */
+  --white:     #d4f5d4;       /* blanc verdâtre */
+  --muted:     #3a6b3a;       /* texte secondaire */
+  --dim:       #0f2b0f;       /* séparateurs */
+
+  /* Typo */
+  --fs: 'Syne', sans-serif;
+  --fm: 'DM Mono', monospace;
+}
+
+/* ── RESET & BASE ─────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--fs);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ── GRAIN OVERLAY ────────────────────────────────── */
+body::after {
+  content: '';
+  position: fixed; inset: 0; z-index: 998; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  opacity: .4;
+}
+
+/* Scanlines subtiles */
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 997; pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 65, 0.012) 2px,
+    rgba(0, 255, 65, 0.012) 4px
+  );
+}
+
+/* ── CANVAS 3D ────────────────────────────────────── */
+#c3d { position: fixed; inset: 0; z-index: 0; }
+
+/* ── CURSOR ───────────────────────────────────────── */
+#cur {
+  position: fixed; z-index: 9999; pointer-events: none;
+  top: 0; left: 0; transform: translate(-50%, -50%);
+}
+#cur-d {
+  width: 6px; height: 6px;
+  background: var(--green); border-radius: 50%;
+  box-shadow: 0 0 8px var(--green);
+}
+#cur-r {
+  position: fixed; z-index: 9998; pointer-events: none;
+  top: 0; left: 0; transform: translate(-50%, -50%);
+  width: 30px; height: 30px;
+  border: 1px solid rgba(0, 255, 65, 0.5); border-radius: 50%;
+  transition: width .35s, height .35s, border-color .35s;
+}
+
+/* ── SECTION BASE ─────────────────────────────────── */
+section { position: relative; z-index: 2; }
+
+.s-label {
+  font-family: var(--fm); font-size: .63rem; color: var(--green);
+  letter-spacing: .35em; text-transform: uppercase;
+  margin-bottom: 1.2rem; display: block;
+}
+
+/* ── BUTTONS ──────────────────────────────────────── */
+.btn {
+  padding: .85rem 1.8rem; font-family: var(--fm); font-size: .68rem;
+  letter-spacing: .15em; text-transform: uppercase; text-decoration: none;
+  cursor: none; transition: all .35s; display: inline-flex;
+  align-items: center; gap: .5rem; border-radius: 4px;
+}
+.btn-a {
+  background: var(--green); color: #010b01; font-weight: 700;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+}
+.btn-a:hover {
+  box-shadow: 0 0 40px rgba(0, 255, 65, 0.5);
+  transform: translateY(-2px);
+}
+.btn-b {
+  border: 1px solid var(--border2); color: var(--white); background: var(--glass);
+}
+.btn-b:hover {
+  border-color: var(--green); color: var(--green);
+  background: var(--glass2); transform: translateY(-2px);
+}
+
+/* ── TICKER ───────────────────────────────────────── */
+.ticker-wrap {
+  overflow: hidden;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  padding: .75rem 0; background: rgba(0, 255, 65, 0.02);
+  position: relative; z-index: 2;
+}
+.ticker {
+  display: flex; gap: 2.5rem; width: max-content;
+  animation: ticker 24s linear infinite;
+  font-family: var(--fm); font-size: .66rem; color: var(--muted);
+  letter-spacing: .2em; text-transform: uppercase;
+}
+.ticker .dot { color: var(--green); }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ── ANIMATIONS ───────────────────────────────────── */
+@keyframes fadeDown  { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeUp    { from { opacity: 0; transform: translateY(24px);  } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse     { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .4; transform: scale(.6); } }
+@keyframes blink     { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes greenPulse { 0%,100% { text-shadow: 0 0 20px rgba(0,255,65,.3); } 50% { text-shadow: 0 0 60px rgba(0,255,65,.7); } }
+
+/* ── SCROLL REVEAL ────────────────────────────────── */
+.rv   { opacity: 0; transform: translateY(32px);  transition: opacity .85s ease, transform .85s ease; }
+.rv.on  { opacity: 1; transform: translateY(0); }
+.rv-l { opacity: 0; transform: translateX(-28px); transition: opacity .85s ease, transform .85s ease; }
+.rv-l.on { opacity: 1; transform: translateX(0); }
+
+/* ── FOOTER ───────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border); padding: 1.8rem 4rem;
+  display: flex; justify-content: space-between; align-items: center;
+  position: relative; z-index: 2;
+  font-family: var(--fm); font-size: .6rem; color: var(--muted); letter-spacing: .12em;
+}
+footer .fg { color: var(--green); }
+
+/* ── RESPONSIVE ───────────────────────────────────── */
+@media (max-width: 960px) {
+  nav, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
