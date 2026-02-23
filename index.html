@@ -3,62 +3,45 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio — EL GAMOUNE Elyes</title>
-
- 
+  <title>Portfolio - EL GAMOUNE Elyes</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
-
- 
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="css/nav.css"/>
   <link rel="stylesheet" href="css/sections.css"/>
 </head>
 <body>
 
-  <!-- Curseur custom -->
   <div id="cur"><div id="cur-d"></div></div>
   <div id="cur-r"></div>
-
   <canvas id="c3d"></canvas>
 
- 
   <nav>
-    <div class="logo">
-      <em>[</em>SYS<em>::</em><span style="color:var(--green)">ALGO</span><em>]</em>
-    </div>
+    <div class="logo"><em>[</em>SYS<em>::</em><span style="color:var(--green)">ALGO</span><em>]</em></div>
     <ul class="nav-links">
-       <li><a href="#stages"class="btn btn-b">Expériences </a></li>
-      <li><a href="#projects"class="btn btn-b">Projets</a></li>
-      <li><a href="#skills"class="btn btn-b">Stack</a></li>
-      <li><a href="#contact"class="btn btn-b">Contact</a></li>
+      <li><a href="#stages">Expériences</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#skills">Stack</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-
- 
+  <!-- ═══ HERO ══════════════════════════════════════ -->
   <section id="hero">
     <div>
       <h1 class="h-title">
         <span>Elyes</span>
         <span class="outline hl">EL GAMOUNE</span>
       </h1>
-
-       <p class="about-text">
+      <p class="about-text">
         Diplômé d'une Licence Informatique option Mathématiques, j'ai construit ma formation autour d'une conviction : 
         la donnée seule ne suffit pas, c'est son dialogue avec un domaine métier qui fait la différence entre une métrique et un impact réel
-       
       </p>
-      
       <br/>
-
       <div class="h-btns">
         <a href="#projects" class="btn btn-a">Voir mes projets →</a>
         <a href="#contact"  class="btn btn-b">Me contacter</a>
       </div>
     </div>
-
-   
-    
     <div class="h-terminal">
       <div class="t-bar">
         <div class="t-dot t-dot-1"></div>
@@ -70,16 +53,14 @@
     </div>
   </section>
 
-
-<section id="stages">
+  <!-- ═══ STAGES ════════════════════════════════════ -->
+  <section id="stages">
     <div class="stages-head rv">
       <span class="s-label">// Expériences</span>
       <h2 class="stages-title">Stages &amp; missions.</h2>
     </div>
-
     <div class="stages-grid">
 
-      <!-- STAGE 1 — CNRS -->
       <div class="scard rv">
         <div class="scard-meta">
           <span class="scard-date">Mai – Août 2025</span>
@@ -107,7 +88,6 @@
         </div>
       </div>
 
-      <!-- STAGE 2 — Viasat Full-Stack -->
       <div class="scard rv">
         <div class="scard-meta">
           <span class="scard-date">Janv. – Fév. 2022</span>
@@ -134,7 +114,6 @@
         </div>
       </div>
 
-      <!-- STAGE 3 — Viasat Java -->
       <div class="scard rv">
         <div class="scard-meta">
           <span class="scard-date">Juin – Août 2022</span>
@@ -164,36 +143,27 @@
     </div>
   </section>
 
- 
+  <!-- ═══ PROJETS ═══════════════════════════════════ -->
   <section id="projects">
-
     <div class="proj-head rv">
       <div>
-        <span class="s-label">//Projets</span>
+        <span class="s-label">// Projets</span>
         <h2 class="proj-title">Ce que j'ai construit</h2>
       </div>
-      
       <a href="https://github.com/elyeselg" target="_blank" class="btn btn-b">GitHub →</a>
     </div>
-
     <div class="proj-grid">
 
-   
       <div class="pcard rv">
-        
-        <div class="pc-top">
-          <h3 class="pc-title">Medical-Disease-Prediction</h3>
-        </div>
+        <div class="pc-top"><h3 class="pc-title">Medical-Disease-Prediction</h3></div>
         <p class="pc-desc">
-        Prédiction de maladies chroniques à partir de 26 biomarqueurs cliniques (pression artérielle, créatinine, hémoglobine, glycémie…). 
-        Pipeline complet : nettoyage des données, feature engineering, puis Random Forest avec tuning des hyperparamètres.
-        Le modèle produit une classification diagnostique avec analyse de l'importance des variables et matrice de confusion pour interpréter les résultats.
+          Prédiction de maladies chroniques à partir de 26 biomarqueurs cliniques (pression artérielle, créatinine, hémoglobine, glycémie…). 
+          Pipeline complet : nettoyage des données, feature engineering, puis Random Forest avec tuning des hyperparamètres.
+          Le modèle produit une classification diagnostique avec analyse de l'importance des variables et matrice de confusion pour interpréter les résultats.
         </p>
         <div class="pc-tags">
-          <span class="ptag a">Python</span>
-          <span class="ptag b">ML</span>
-          <span class="ptag b">Pandas</span>
-          <span class="ptag">Matplotlib</span>
+          <span class="ptag a">Python</span><span class="ptag b">ML</span>
+          <span class="ptag b">Pandas</span><span class="ptag">Matplotlib</span>
         </div>
         <div class="pc-foot">
           <a href="https://github.com/elyeselg/Medical-Disease-Prediction" class="btn btn-b" target="_blank">Voir le repo →</a>
@@ -201,61 +171,44 @@
         </div>
       </div>
 
-     
       <div class="pcard rv">
-        <div class="pc-top">
-          <h3 class="pc-title">Cellular-Automata</h3>
-          
-        </div>
+        <div class="pc-top"><h3 class="pc-title">Cellular-Automata</h3></div>
         <p class="pc-desc">
-         Implémentation en Java de quatre automates cellulaires classiques :
-         automate 1D à règles binaires configurables, simulation de Feu de Forêt avec probabilités d'embrasement et densité d'arbres paramétrables, Jeu de la Vie de Conway, et automate Majoritaire à taille de voisinage variable.
-         L'architecture repose sur une classe abstraite CellularAutomaton qui centralise l'initialisation, l'évolution et l'affichage: chaque automate n'a qu'à implémenter ses propres règles, ce qui rend le projet facilement extensible.
-         Interface console interactive pour sélectionner, configurer et faire tourner chaque simulation pas à pas.
+          Implémentation en Java de quatre automates cellulaires classiques : automate 1D à règles binaires configurables, simulation de Feu de Forêt avec probabilités d'embrasement et densité d'arbres paramétrables, Jeu de la Vie de Conway, et automate Majoritaire à taille de voisinage variable.
+          L'architecture repose sur une classe abstraite CellularAutomaton qui centralise l'initialisation, l'évolution et l'affichage : chaque automate n'a qu'à implémenter ses propres règles, ce qui rend le projet facilement extensible.
+          Interface console interactive pour sélectionner, configurer et faire tourner chaque simulation pas à pas.
         </p>
-        <div class="pc-tags">
-          <span class="ptag a">Java</span>
-        </div>
+        <div class="pc-tags"><span class="ptag a">Java</span></div>
         <div class="pc-foot">
           <a href="https://github.com/elyeselg/Cellular-Automata" class="btn btn-b" target="_blank">Voir le repo →</a>
           <span class="pc-year">2024</span>
         </div>
       </div>
 
-     
       <div class="pcard rv">
-        <div class="pc-top">
-          <h3 class="pc-title">Encryption-and-Decryption-Application</h3>
-        </div>
+        <div class="pc-top"><h3 class="pc-title">Encryption-and-Decryption-Application</h3></div>
         <p class="pc-desc">
           Application de chiffrement et déchiffrement de messages, basée sur l'algorithme AES (Advanced Encryption Standard).
           Un chiffrement symétrique qui garantit à la fois sécurité et performance. L'application génère automatiquement une clé et un vecteur d'initialisation (IV) uniques à chaque session,
           ce qui assure qu'un même message ne produira jamais deux fois le même résultat chiffré.
           Interface console simple avec deux modes : chiffrement d'un texte brut vers un format Base64, et déchiffrement avec fourniture de la clé et de l'IV correspondants.
         </p>
-        <div class="pc-tags">
-          <span class="ptag a">C#</span>
-        </div>
+        <div class="pc-tags"><span class="ptag a">C#</span></div>
         <div class="pc-foot">
           <a href="https://github.com/elyeselg/Encryption-and-Decryption-Application" class="btn btn-b" target="_blank">Voir le repo →</a>
           <span class="pc-year">2023</span>
         </div>
       </div>
 
-    
       <div class="pcard rv">
-        <div class="pc-top">
-          <h3 class="pc-title">AI_translate</h3>
-          
-        </div>
+        <div class="pc-top"><h3 class="pc-title">AI_translate</h3></div>
         <p class="pc-desc">
           Application de traduction de texte en Python avec interface graphique tkinter.
           L'utilisateur saisit un texte, renseigne le code de la langue cible (fr, en, es…) et obtient la traduction en temps réel via l'API Google Translate (bibliothèque googletrans).
           Projet orienté expérience utilisateur avec une interface épurée construite avec les widgets ttk.
         </p>
         <div class="pc-tags">
-          <span class="ptag a">Python</span>
-          <span class="ptag c">tkinter</span>
+          <span class="ptag a">Python</span><span class="ptag c">tkinter</span>
         </div>
         <div class="pc-foot">
           <a href="https://github.com/elyeselg/AI_translate" class="btn btn-b" target="_blank">Voir le repo →</a>
@@ -263,139 +216,62 @@
         </div>
       </div>
 
-
       <div class="pcard wip rv">
-       
-        <div class="pc-top">
-          <h3 class="pc-title">Alignement Séquences ADN</h3>
-          
-        </div>
+        <div class="pc-top"><h3 class="pc-title">Alignement Séquences ADN</h3></div>
         <p class="pc-desc">
-          Implémentation Needleman-Wunsch. Analyse de séquences génomiques,
-          visualisation des alignements optimaux.
+          Implémentation Needleman-Wunsch. Analyse de séquences génomiques, visualisation des alignements optimaux.
         </p>
         <div class="pc-tags">
-          <span class="ptag a">Python</span>
-          <span class="ptag b">Bioinf</span>
-          <span class="ptag">Biopython</span>
+          <span class="ptag a">Python</span><span class="ptag b">Bioinf</span><span class="ptag">Biopython</span>
         </div>
         <div class="pc-foot">
           <span style="font-family:var(--fm);font-size:.66rem;color:var(--green)">◦ En cours</span>
         </div>
       </div>
 
-      
+    </div>
   </section>
 
-
- 
-
+  <!-- ═══ SKILLS ════════════════════════════════════ -->
   <section id="skills">
     <div class="rv">
-      <span class="s-label">//Stack technique</span>
+      <span class="s-label">// Stack technique</span>
       <h2 class="skills-big-title">Domaines Techniques</h2>
     </div>
-
     <div class="skills-mosaic" id="smosaic">
-
-                <div class="sm-cell rv">
-            
-            <div class="sm-name">Langages</div>
-            <div class="sm-desc">Python · C/C++ · Java · C#<br/>R · MATLAB · PHP · JavaScript</div>
-            <div class="sm-bar"><div class="sm-bar-fill" style="--w:85%"></div></div>
-          </div>
-
-          <div class="sm-cell rv">
-          
-            <div class="sm-name">Algorithmique</div>
-            <div class="sm-desc">Graphes · Arbres · Tri & Recherche<br/>Complexité · POO · Optimisation</div>
-            <div class="sm-bar"><div class="sm-bar-fill" style="--w:85%"></div></div>
-          </div>
-
-          <div class="sm-cell rv">
-           
-            <div class="sm-name">Data & IA</div>
-             <div class="sm-desc">Modélisation prédictive · Explicabilité<br/>Évaluation & validation statistique<br/>Visualisation · Pipeline de données</div>
-            <div class="sm-bar"><div class="sm-bar-fill" style="--w:90%"></div></div>
-          </div>
-
-          <div class="sm-cell rv">
-          
-            <div class="sm-name">Systèmes & Concurrence</div>
-            <div class="sm-desc">Linux · Windows · macOS<br/>Processus · Threads · Ordonnancement</div>
-            <div class="sm-bar"><div class="sm-bar-fill" style="--w:80%"></div></div>
-          </div>
-
-          <div class="sm-cell rv">
-          
-            <div class="sm-name">Web & API</div>
-            <div class="sm-desc">React · Angular · Vue.js · Node.js<br/>Django · .NET · REST</div>
-            <div class="sm-bar"><div class="sm-bar-fill" style="--w:90%"></div></div>
-          </div>
-
-          <div class="sm-cell rv">
-          
-            <div class="sm-name">Bases de données</div>
-            <div class="sm-desc">PostgreSQL · MySQL · MongoDB<br/>Modélisation · Indexation · Transactions</div>
-            <div class="sm-bar"><div class="sm-bar-fill" style="--w:85%"></div></div>
-          </div>
-
-          <div class="sm-cell rv">
-            
-            <div class="sm-name">Réseaux</div>
-            <div class="sm-desc">TCP/IP · DNS · VLAN · Routage<br/>Wireshark · Nmap · NAT</div>
-            <div class="sm-bar"><div class="sm-bar-fill" style="--w:70%"></div></div>
-          </div>
-
-          <div class="sm-cell rv">
-         
-            <div class="sm-name">Cybersécurité</div>
-            <div class="sm-desc">AES · RSA · VPN<br/>Cryptographie · RGPD</div>
-            <div class="sm-bar"><div class="sm-bar-fill" style="--w:75%"></div></div>
-          </div>
-
-          <div class="sm-cell rv">
-           
-            <div class="sm-name">Virtualisation</div>
-            <div class="sm-desc">Docker · VMware · VirtualBox<br/>Hyper-V · Déploiement multi-OS</div>
-            <div class="sm-bar"><div class="sm-bar-fill" style="--w:80%"></div></div>
-          </div>
-
-              </div>
+      <div class="sm-cell rv"><div class="sm-name">Langages</div><div class="sm-desc">Python · C/C++ · Java · C#<br/>R · MATLAB · PHP · JavaScript</div><div class="sm-bar"><div class="sm-bar-fill" style="--w:85%"></div></div></div>
+      <div class="sm-cell rv"><div class="sm-name">Algorithmique</div><div class="sm-desc">Graphes · Arbres · Tri &amp; Recherche<br/>Complexité · POO · Optimisation</div><div class="sm-bar"><div class="sm-bar-fill" style="--w:85%"></div></div></div>
+      <div class="sm-cell rv"><div class="sm-name">Data &amp; IA</div><div class="sm-desc">Modélisation prédictive · Explicabilité<br/>Évaluation &amp; validation statistique<br/>Visualisation · Pipeline de données</div><div class="sm-bar"><div class="sm-bar-fill" style="--w:90%"></div></div></div>
+      <div class="sm-cell rv"><div class="sm-name">Systèmes &amp; Concurrence</div><div class="sm-desc">Linux · Windows · macOS<br/>Processus · Threads · Ordonnancement</div><div class="sm-bar"><div class="sm-bar-fill" style="--w:80%"></div></div></div>
+      <div class="sm-cell rv"><div class="sm-name">Web &amp; API</div><div class="sm-desc">React · Angular · Vue.js · Node.js<br/>Django · .NET · REST</div><div class="sm-bar"><div class="sm-bar-fill" style="--w:90%"></div></div></div>
+      <div class="sm-cell rv"><div class="sm-name">Bases de données</div><div class="sm-desc">PostgreSQL · MySQL · MongoDB<br/>Modélisation · Indexation · Transactions</div><div class="sm-bar"><div class="sm-bar-fill" style="--w:85%"></div></div></div>
+      <div class="sm-cell rv"><div class="sm-name">Réseaux</div><div class="sm-desc">TCP/IP · DNS · VLAN · Routage<br/>Wireshark · Nmap · NAT</div><div class="sm-bar"><div class="sm-bar-fill" style="--w:70%"></div></div></div>
+      <div class="sm-cell rv"><div class="sm-name">Cybersécurité</div><div class="sm-desc">AES · RSA · VPN<br/>Cryptographie · RGPD</div><div class="sm-bar"><div class="sm-bar-fill" style="--w:75%"></div></div></div>
+      <div class="sm-cell rv"><div class="sm-name">Virtualisation</div><div class="sm-desc">Docker · VMware · VirtualBox<br/>Hyper-V · Déploiement multi-OS</div><div class="sm-bar"><div class="sm-bar-fill" style="--w:80%"></div></div></div>
+    </div>
   </section>
 
-
-  
+  <!-- ═══ CONTACT ═══════════════════════════════════ -->
   <section id="contact">
     <div class="contact-inner rv">
-      <span class="s-label">//Contact</span>
-      <h2 class="ct-title">
-        Travaillons<br/>
-        <span class="glow">ensemble !</span>
-      </h2>
-      
+      <span class="s-label">// Contact</span>
+      <h2 class="ct-title">Travaillons<br/><span class="glow">ensemble !</span></h2>
       <div class="ct-links">
         <a href="mailto:elgamouneelyes@gmail.com" class="btn btn-b">✉ Email</a>
-      
-        <a href="https://github.com/elyeselg" target="_blank"class="btn btn-b">⌥ GitHub</a>
-      
+        <a href="https://github.com/elyeselg" target="_blank" class="btn btn-b">⌥ GitHub</a>
         <a href="https://linkedin.com/in/elyes-el-gamoune-75319120a/" target="_blank" class="btn btn-b">▸ LinkedIn</a>
       </div>
-     
+      <br/><br/>
       <a href="cv.pdf" download class="cv-btn">↓ Téléchargez mon CV</a>
     </div>
   </section>
 
-
-  <!-- FOOTER -->
   <footer>
     <span>© 2025 — <span class="fg">EL GAMOUNE Elyes</span></span>
     <span>L3 Informatique · Option Mathématiques</span>
     <span>Fait avec <span class="fg">♥</span> et café</span>
   </footer>
 
-
-  <!--JS-->
   <script src="js/canvas3d.js"></script>
   <script src="js/app.js"></script>
 
