@@ -217,7 +217,7 @@
 .skills-big-title { font-size: clamp(2rem, 5vw, 4rem); font-weight: 800; letter-spacing: -.04em; margin-bottom: 3rem; }
 
 .skills-mosaic {
-  display: grid; grid-template-columns: repeat(4, 1fr);
+  display: grid; grid-template-columns: repeat(3, 1fr);
   gap: 1px; background: var(--border);
   border: 1px solid var(--border); border-radius: 6px; overflow: hidden;
 }
