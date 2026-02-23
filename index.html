@@ -27,6 +27,7 @@
       <em>[</em>SYS<em>::</em><span style="color:var(--green)">ALGO</span><em>]</em>
     </div>
     <ul class="nav-links">
+       <li><a href="#stages"class="btn btn-b">Expériences </a></li>
       <li><a href="#projects"class="btn btn-b">Projets</a></li>
       <li><a href="#skills"class="btn btn-b">Stack</a></li>
       <li><a href="#contact"class="btn btn-b">Contact</a></li>
@@ -70,7 +71,98 @@
   </section>
 
 
+<section id="stages">
+    <div class="stages-head rv">
+      <span class="s-label">// Expériences</span>
+      <h2 class="stages-title">Stages &amp; missions.</h2>
+    </div>
 
+    <div class="stages-grid">
+
+      <!-- STAGE 1 — CNRS -->
+      <div class="scard rv">
+        <div class="scard-meta">
+          <span class="scard-date">Mai – Août 2025</span>
+          <span class="scard-type">Stage Data Scientist</span>
+        </div>
+        <div class="scard-company">CNRS Lyon</div>
+        <p class="scard-mission">
+          Conception d'un modèle d'IA pour la détection et prédiction de maladies cardiovasculaires à partir de données multimodales (biologiques, génétiques, ECG, cliniques) sous la direction du Pr Philippe Chevalier et du Dr Khalid Benabdeslem.
+        </p>
+        <ul class="scard-list">
+          <li>Pipeline IA complet : nettoyage, feature engineering, modélisation, visualisation</li>
+          <li>Modèle multi-label supervisé (Classifier Chains, XGBoost, LightGBM, RF)</li>
+          <li>Interprétabilité SHAP pour validation clinique</li>
+          <li>Interface Dash interactive pour visualisation ECG</li>
+          <li>Documentation scientifique intégrée au livrable CNRS</li>
+        </ul>
+        <div class="scard-results">
+          <span class="scard-kpi">+45% précision</span>
+          <span class="scard-kpi-label">vs modèle de référence · Prototype transférable en milieu hospitalier</span>
+        </div>
+        <div class="scard-tags">
+          <span class="ptag a">Python</span><span class="ptag a">XGBoost</span>
+          <span class="ptag a">SHAP</span><span class="ptag b">Dash</span>
+          <span class="ptag">Scikit-learn</span><span class="ptag">Plotly</span>
+        </div>
+      </div>
+
+      <!-- STAGE 2 — Viasat Full-Stack -->
+      <div class="scard rv">
+        <div class="scard-meta">
+          <span class="scard-date">Janv. – Fév. 2022</span>
+          <span class="scard-type">Stage Développeur Full-Stack</span>
+        </div>
+        <div class="scard-company">Viasat Connect</div>
+        <p class="scard-mission">
+          Développement d'un service web sécurisé affichant en temps réel l'activité et la localisation d'une flotte de véhicules via Leaflet.js et l'API Viasat Connect.
+        </p>
+        <ul class="scard-list">
+          <li>Intégration de flux IoT GPS temps réel via l'API REST interne</li>
+          <li>Carte interactive Leaflet.js avec gestion dynamique des trajets et états des véhicules</li>
+          <li>Actualisation asynchrone des données sans rechargement complet</li>
+          <li>Authentification sécurisée (tokens, sessions) pour données B2B</li>
+        </ul>
+        <div class="scard-results">
+          <span class="scard-kpi">−30% chargement</span>
+          <span class="scard-kpi-label">· Module cartographique réutilisé dans d'autres produits internes</span>
+        </div>
+        <div class="scard-tags">
+          <span class="ptag a">PHP</span><span class="ptag a">JavaScript</span>
+          <span class="ptag b">Leaflet.js</span><span class="ptag">Symfony</span>
+          <span class="ptag">REST API</span><span class="ptag">MySQL</span>
+        </div>
+      </div>
+
+      <!-- STAGE 3 — Viasat Java -->
+      <div class="scard rv">
+        <div class="scard-meta">
+          <span class="scard-date">Juin – Août 2022</span>
+          <span class="scard-type">Développeur Java &amp; BDD</span>
+        </div>
+        <div class="scard-company">Viasat Connect</div>
+        <p class="scard-mission">
+          Développement d'un projet Java/Maven pour générer, valider et stocker des fichiers JSON contenant les données de la flotte de véhicules.
+        </p>
+        <ul class="scard-list">
+          <li>Moteur Java automatisant la création et vérification de fichiers JSON issus de la télémétrie</li>
+          <li>Base MySQL structurée pour l'ingestion, la traçabilité et l'analyse des données de flotte</li>
+          <li>Intégration JDBC avec gestion des transactions et contrôles d'intégrité</li>
+          <li>Tests unitaires Maven pour garantir la fiabilité des traitements</li>
+        </ul>
+        <div class="scard-results">
+          <span class="scard-kpi">−25% traitement</span>
+          <span class="scard-kpi-label">· Base intégrée dans le système de supervision de flotte</span>
+        </div>
+        <div class="scard-tags">
+          <span class="ptag a">Java</span><span class="ptag a">Maven</span>
+          <span class="ptag b">MySQL</span><span class="ptag">JDBC</span>
+          <span class="ptag">JSON</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
  
   <section id="projects">
