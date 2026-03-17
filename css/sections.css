@@ -1,4 +1,6 @@
-
+/* ═══════════════════════════════════════════════════
+   SECTIONS CSS — ordre logique du DOM
+   ═══════════════════════════════════════════════════ */
 
 
 /* ══════════════════════════
@@ -229,8 +231,91 @@
 .cv-btn:hover { box-shadow: 0 0 50px rgba(0,255,65,.5); transform: translateY(-3px); }
 
 
+/* ══════════════════════════
+   RECHERCHE
+   ══════════════════════════ */
+#recherche { padding: 9rem 4rem; }
+
+.rech-head { margin-bottom: 3.5rem; }
+.rech-title { font-size: clamp(2rem, 5vw, 4rem); font-weight: 800; letter-spacing: -.04em; line-height: 1; }
+
+.rech-card {
+  display: grid; grid-template-columns: 1fr 280px;
+  gap: 3rem; align-items: start;
+  background: var(--glass); backdrop-filter: blur(18px);
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 2.8rem; position: relative; overflow: hidden;
+}
+.rech-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--green), transparent);
+}
+
+.rech-meta {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: .5rem; margin-bottom: 1.2rem;
+}
+.rech-domain {
+  font-family: var(--fm); font-size: .6rem;
+  color: var(--green); letter-spacing: .15em; opacity: .8;
+}
+.rech-level {
+  font-family: var(--fm); font-size: .58rem;
+  color: var(--muted); letter-spacing: .1em; text-transform: uppercase;
+}
+
+.rech-subtitle {
+  font-size: 1.05rem; font-weight: 700; letter-spacing: -.01em;
+  line-height: 1.4; margin-bottom: 1.4rem; color: var(--white);
+}
+
+.rech-abstract {
+  font-family: var(--fm); font-size: .63rem;
+  color: var(--muted); line-height: 1.9; margin-bottom: 1.6rem;
+}
+.rech-abstract em { color: var(--white); font-style: italic; }
+
+.rech-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+
+/* Colonne droite */
+.rech-right {
+  display: flex; flex-direction: column; gap: 1.4rem;
+}
+
+.rech-dl {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1.2rem 1.4rem;
+  background: rgba(0,255,65,.06); border: 1px solid rgba(0,255,65,.25);
+  border-radius: 6px; text-decoration: none;
+  transition: all .35s;
+}
+.rech-dl:hover {
+  background: rgba(0,255,65,.1); border-color: var(--green);
+  transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,.3), 0 0 20px rgba(0,255,65,.08);
+}
+.rech-dl-icon { font-size: 1.4rem; color: var(--green); flex-shrink: 0; }
+.rech-dl-text { display: flex; flex-direction: column; gap: .2rem; }
+.rech-dl-main { font-family: var(--fm); font-size: .68rem; font-weight: 700; color: var(--green); letter-spacing: .1em; text-transform: uppercase; }
+.rech-dl-sub  { font-family: var(--fm); font-size: .55rem; color: var(--muted); letter-spacing: .08em; }
+
+.rech-stat {
+  padding: 1rem 1.2rem;
+  background: rgba(0,255,65,.03); border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.rech-stat-n {
+  font-size: 1.8rem; font-weight: 800; letter-spacing: -.03em;
+  color: var(--green); line-height: 1;
+  text-shadow: 0 0 20px rgba(0,255,65,.3);
+}
+.rech-stat-l {
+  font-family: var(--fm); font-size: .55rem; color: var(--muted);
+  letter-spacing: .08em; line-height: 1.6; margin-top: .3rem;
+}
+
+
 /* ══════════════════════════════════════════════════════
-   MEDIA QUERIES — tout regroupé ici, dans l'ordre
+   MEDIA QUERIES 
    ══════════════════════════════════════════════════════ */
 
 /* ≤ 1100px */
@@ -247,7 +332,11 @@
   #about   { grid-template-columns: 1fr; gap: 3rem; padding: 6rem 1.5rem; }
   #stages  { padding: 6rem 1.5rem; }
   .stages-grid { grid-template-columns: 1fr; }
-  #projects { padding: 6rem 1.5rem; }
+  #recherche { padding: 6rem 1.5rem; }
+  .rech-card { grid-template-columns: 1fr; gap: 2rem; padding: 2rem; }
+  .rech-right { flex-direction: row; flex-wrap: wrap; }
+  .rech-dl { flex: 1 1 100%; }
+  .rech-stat { flex: 1 1 calc(50% - .7rem); }
   .proj-head { flex-direction: column; align-items: flex-start; gap: 1rem; }
   #skills  { padding: 6rem 1.5rem; }
   .skills-mosaic { grid-template-columns: repeat(2, 1fr); }
@@ -268,6 +357,11 @@
   .stages-grid { grid-template-columns: 1fr; }
   .scard-meta { flex-direction: column; align-items: flex-start; gap: .3rem; }
   .scard-results { flex-direction: column; gap: .3rem; }
+  #recherche { padding: 5rem 1.5rem; }
+  .rech-card { padding: 1.5rem; }
+  .rech-meta { flex-direction: column; align-items: flex-start; }
+  .rech-right { flex-direction: column; }
+  .rech-stat { flex: 1 1 100%; }
   #projects { padding: 5rem 1.5rem; }
   .proj-grid { grid-template-columns: 1fr; }
   #skills { padding: 5rem 1.5rem; }
